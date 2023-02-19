@@ -10,9 +10,11 @@
 		5B56ACFF299CF6C80057AB48 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56ACFE299CF6C80057AB48 /* AppDelegate.swift */; };
 		5B56AD01299CF6C80057AB48 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56AD00299CF6C80057AB48 /* SceneDelegate.swift */; };
 		5B56AD03299CF6C80057AB48 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56AD02299CF6C80057AB48 /* ViewController.swift */; };
-		5B56AD06299CF6C80057AB48 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B56AD04299CF6C80057AB48 /* Main.storyboard */; };
 		5B56AD08299CF6CB0057AB48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B56AD07299CF6CB0057AB48 /* Assets.xcassets */; };
 		5B56AD0B299CF6CB0057AB48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B56AD09299CF6CB0057AB48 /* LaunchScreen.storyboard */; };
+		5B56AD13299CF8B60057AB48 /* FileCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56AD12299CF8B60057AB48 /* FileCollectionViewCell.swift */; };
+		5B56AD16299CF9F10057AB48 /* EasyPeasy in Frameworks */ = {isa = PBXBuildFile; productRef = 5B56AD15299CF9F10057AB48 /* EasyPeasy */; };
+		5B56AD1C299D48560057AB48 /* Manager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B56AD1B299D48560057AB48 /* Manager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +22,11 @@
 		5B56ACFE299CF6C80057AB48 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B56AD00299CF6C80057AB48 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		5B56AD02299CF6C80057AB48 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5B56AD05299CF6C80057AB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B56AD07299CF6CB0057AB48 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B56AD0A299CF6CB0057AB48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B56AD0C299CF6CB0057AB48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B56AD12299CF8B60057AB48 /* FileCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileCollectionViewCell.swift; sourceTree = "<group>"; };
+		5B56AD1B299D48560057AB48 /* Manager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B56AD16299CF9F10057AB48 /* EasyPeasy in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,9 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				5B56ACFE299CF6C80057AB48 /* AppDelegate.swift */,
+				5B56AD1B299D48560057AB48 /* Manager.swift */,
 				5B56AD00299CF6C80057AB48 /* SceneDelegate.swift */,
 				5B56AD02299CF6C80057AB48 /* ViewController.swift */,
-				5B56AD04299CF6C80057AB48 /* Main.storyboard */,
+				5B56AD12299CF8B60057AB48 /* FileCollectionViewCell.swift */,
 				5B56AD07299CF6CB0057AB48 /* Assets.xcassets */,
 				5B56AD09299CF6CB0057AB48 /* LaunchScreen.storyboard */,
 				5B56AD0C299CF6CB0057AB48 /* Info.plist */,
@@ -83,6 +88,9 @@
 			dependencies = (
 			);
 			name = MyFileBrowser;
+			packageProductDependencies = (
+				5B56AD15299CF9F10057AB48 /* EasyPeasy */,
+			);
 			productName = MyFileBrowser;
 			productReference = 5B56ACFB299CF6C80057AB48 /* MyFileBrowser.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +119,9 @@
 				Base,
 			);
 			mainGroup = 5B56ACF2299CF6C80057AB48;
+			packageReferences = (
+				5B56AD14299CF9F10057AB48 /* XCRemoteSwiftPackageReference "EasyPeasy" */,
+			);
 			productRefGroup = 5B56ACFC299CF6C80057AB48 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -127,7 +138,6 @@
 			files = (
 				5B56AD0B299CF6CB0057AB48 /* LaunchScreen.storyboard in Resources */,
 				5B56AD08299CF6CB0057AB48 /* Assets.xcassets in Resources */,
-				5B56AD06299CF6C80057AB48 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -139,7 +149,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B56AD03299CF6C80057AB48 /* ViewController.swift in Sources */,
+				5B56AD1C299D48560057AB48 /* Manager.swift in Sources */,
 				5B56ACFF299CF6C80057AB48 /* AppDelegate.swift in Sources */,
+				5B56AD13299CF8B60057AB48 /* FileCollectionViewCell.swift in Sources */,
 				5B56AD01299CF6C80057AB48 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,14 +159,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5B56AD04299CF6C80057AB48 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5B56AD05299CF6C80057AB48 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5B56AD09299CF6CB0057AB48 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -291,7 +295,6 @@
 				INFOPLIST_FILE = MyFileBrowser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -318,7 +321,6 @@
 				INFOPLIST_FILE = MyFileBrowser/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -356,6 +358,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5B56AD14299CF9F10057AB48 /* XCRemoteSwiftPackageReference "EasyPeasy" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nakiostudio/EasyPeasy";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5B56AD15299CF9F10057AB48 /* EasyPeasy */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5B56AD14299CF9F10057AB48 /* XCRemoteSwiftPackageReference "EasyPeasy" */;
+			productName = EasyPeasy;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5B56ACF3299CF6C80057AB48 /* Project object */;
 }
